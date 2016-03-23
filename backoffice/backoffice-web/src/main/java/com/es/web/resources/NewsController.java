@@ -1,7 +1,7 @@
 package com.es.web.resources;
 
-import java.util.List;
-
+import com.es.bo.biz.domain.News;
+import com.es.bo.biz.service.NewsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.es.bo.biz.domain.News;
-import com.es.bo.biz.service.NewsService;
+import java.time.LocalDate;
+import java.util.List;
 
 /**
  * Created by myachb on 3/18/2016.
@@ -34,10 +34,15 @@ public class NewsController {
     }
     
     @RequestMapping(method= RequestMethod.GET)
-    public @ResponseBody List<News> getAllNews(News news){
+    public @ResponseBody List<News> getAllNews(){
     	return newsService.getNews();
-    }    
-    
+    }
+
+    @RequestMapping(method= RequestMethod.GET)
+    public @ResponseBody List<News> getNewsInDateRange(LocalDate fromDate, LocalDate toDate){
+        return newsService.getNews();
+    }
+
     @RequestMapping(method= RequestMethod.POST)
     public @ResponseBody String addNews(@RequestBody News news){
     	newsService.createNews(news);
