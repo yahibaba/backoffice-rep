@@ -11,7 +11,7 @@
 
     <appender name="fileAppender" class="org.apache.log4j.RollingFileAppender">
         <!--<param name="file" value="c:/tmp/logs/prior-auth-notification.log"/>-->
-        <param name="file" value="C:/data/bo.log"/>
+        <param name="file" value="/home/yahibaba/data/madmin/bo.log"/>
         <param name="MaxFileSize" value="30MB"/>
         <!-- Keep one backup file -->
         <param name="MaxBackupIndex" value="1"/>

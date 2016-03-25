@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 /**
  * Created by myachb on 3/8/2016.
  */
-
+@Document
 public class News {
 
     @Id
