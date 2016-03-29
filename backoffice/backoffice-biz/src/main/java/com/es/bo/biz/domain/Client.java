@@ -6,16 +6,10 @@ public class Client {
 
     @Id
     private String id;
-
-    private String firstName;
-    private String lastName;
+    private String clientId;
+    private Address address;
 
     public Client() {}
-
-    public Client(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
 
     public String getId() {
         return id;
@@ -25,27 +19,22 @@ public class Client {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
+	public String getClientId() {
+		return clientId;
+	}
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+	public void setClientId(String clientId) {
+		this.clientId = clientId;
+	}
 
-    public String getLastName() {
-        return lastName;
-    }
+	public Address getAddress() {
+		return address;
+	}
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 
-    @Override
-    public String toString() {
-        return String.format(
-                "Customer[id=%s, firstName='%s', lastName='%s']",
-                id, firstName, lastName);
-    }
+    
 
 }
