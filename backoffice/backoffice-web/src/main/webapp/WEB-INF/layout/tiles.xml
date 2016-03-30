@@ -10,9 +10,13 @@
 		<put-attribute name="right-aside" value="/WEB-INF/pages/right-aside-empty.jsp" />
 	</definition>	
 	
-	<definition name="uploadPrayerTimesTile" extends="baseTile">
-		<put-attribute name="body" value="/WEB-INF/pages/uploadPrayerTimes.jsp" />
-	</definition>	
-	
+	<definition name="newsListTile" extends="baseTile">
+		<put-attribute name="body" value="/WEB-INF/pages/newsList.jsp" />
+	</definition>
+
+    <definition name="newsCRUDTile" extends="baseTile">
+        <put-attribute name="body" value="/WEB-INF/pages/newsCreateOrUpdate.jsp" />
+    </definition>
+
 
 </tiles-definitions>
