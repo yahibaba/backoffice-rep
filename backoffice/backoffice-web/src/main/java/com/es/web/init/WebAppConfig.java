@@ -9,6 +9,7 @@ import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
 import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 
 import javax.annotation.Resource;
@@ -68,15 +69,15 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
         return source;
     }
 
-//    @Bean
-//    public TilesConfigurer tilesConfigurer() {
-//        TilesConfigurer tiles = new TilesConfigurer();
-//        tiles.setDefinitions(new String[] {
-//                "/WEB-INF/layout/tiles.xml"
-//        });
-//        tiles.setCheckRefresh(true);
-//        return tiles;
-//    }
+    @Bean
+    public TilesConfigurer tilesConfigurer() {
+        TilesConfigurer tiles = new TilesConfigurer();
+        tiles.setDefinitions(new String[] {
+                "/WEB-INF/layout/tiles.xml"
+        });
+        tiles.setCheckRefresh(true);
+        return tiles;
+    }
 
     @Bean
     public ViewResolver viewResolver() {

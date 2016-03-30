@@ -93,7 +93,10 @@
             <groupId>com.sun.mail</groupId>
             <artifactId>javax.mail</artifactId>
         </dependency>
-
+		<dependency>
+		 <groupId>com.thetransactioncompany</groupId>
+		 <artifactId>cors-filter</artifactId>
+		</dependency>
     </dependencies>
     <build>
         <finalName>backoffice-web</finalName>

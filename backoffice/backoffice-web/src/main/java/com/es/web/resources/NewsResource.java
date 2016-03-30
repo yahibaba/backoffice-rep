@@ -21,7 +21,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/news")
-public class NewsController {
+public class NewsResource {
 
     /**
      * Health check operation
